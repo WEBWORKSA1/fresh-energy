@@ -1,0 +1,15 @@
+{
+ "name": "Fresh.Energy",
+ "short_name": "Fresh.Energy",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#F5F8F1",
+ "theme_color": "#0B2B26",
+ "icons": [
+  {
+   "src": "/assets/img/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}
