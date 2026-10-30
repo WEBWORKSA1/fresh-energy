@@ -1,0 +1,7 @@
+title: Fresh.Energy
+url: https://fresh.energy
+exclude:
+  - README.md
+  - PROMPTS.md
+  - RESEARCH.md
+  - .gitignore

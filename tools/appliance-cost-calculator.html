@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Appliance energy cost calculator | Fresh.Energy"
+desc: "Find out what each appliance costs to run per month and per year. 26 presets plus custom items, ranked by cost so you can spot the energy hogs."
+robots: "<meta name=\"robots\" content=\"index,follow,max-image-preview:large\">"
+canon: "https://fresh.energy/tools/appliance-cost-calculator.html"
+ogtype: "website"
+pre: "../"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"Organization\", \"name\": \"Fresh.Energy\", \"url\": \"https://fresh.energy/\", \"logo\": \"https://fresh.energy/assets/img/favicon.svg\"}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Appliance energy cost calculator\", \"applicationCategory\": \"UtilitiesApplication\", \"operatingSystem\": \"Any (web browser)\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}, \"url\": \"https://fresh.energy/tools/appliance-cost-calculator.html\", \"description\": \"Find out what each appliance costs to run per month and per year. 26 presets plus custom items, ranked by cost so you can spot the energy hogs.\"}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How do I calculate an appliance's electricity cost?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Watts ÷ 1,000 × hours used × your price per kWh. For example, a 100 W TV used 5 hours a day uses 0.5 kWh daily — about 15 kWh a month.\"}}, {\"@type\": \"Question\", \"name\": \"Which appliances use the most electricity?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Typically space heating and cooling, water heaters, clothes dryers, electric ovens, pool pumps and EV charging. Electronics individually use little but add up, especially on standby.\"}}, {\"@type\": \"Question\", \"name\": \"Why does my result differ from my bill?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Bills include fixed charges, taxes and appliances you didn't list. Seasonal loads like heating and cooling also vary month to month.\"}}]}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://fresh.energy/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Calculators\", \"item\": \"https://fresh.energy/tools/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Appliance energy cost calculator\", \"item\": \"https://fresh.energy/tools/appliance-cost-calculator.html\"}]}</script>\n"
+tj: "<script src=\"../assets/js/tools.js\"></script>"
+scripts: ""
+nav_key: "tools/"
+---
+{% raw %}
+<div class="wrap page-head"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../tools/">Calculators</a> / <span>Appliance energy cost calculator</span></nav><div class="eyebrow"><i></i>Free calculator · runs in your browser</div><h1>Appliance energy cost calculator</h1><p class="lede">Add your appliances, set how long they run, and see exactly where your electricity money goes — ranked from biggest to smallest.</p></div>
+<div class="wrap">
+ <div class="tool-wrap">
+  <div class="panel"><div id="ap-calc"><div class="form"><div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">Your appliances</h3><span class="cur-pick"><label>Currency <select data-cur-pick><option>$</option><option>£</option><option>€</option><option>₹</option></select></label></span></div>
+<div><label for="ap-rate">Electricity price per kWh</label><input id="ap-rate" type="number" inputmode="decimal" min="0" step="0.01" value="0.17"></div>
+<div class="row"><div><label for="ap-preset">Add a common appliance</label><select id="ap-preset"></select></div><div style="display:flex;gap:8px;align-items:end"><button type="button" class="btn small" id="ap-add">Add</button><button type="button" class="btn small ghost" id="ap-blank">Custom</button></div></div></div>
+<div id="ap-rows" style="margin-top:16px"></div></div></div>
+  <div class="panel results" aria-live="polite"><h3>Your running costs</h3>
+<div class="kpis"><div class="kpi hi"><b id="ap-year">—</b><span>Per year</span></div><div class="kpi"><b id="ap-month">—</b><span>Per month</span></div></div>
+<p class="muted" id="ap-kwh" style="margin-top:-4px">—</p>
+<div class="table-scroll"><table class="data"><thead><tr><th>Appliance</th><th>kWh/yr</th><th>Per month</th><th>Per year</th></tr></thead><tbody id="ap-table"></tbody></table></div>
+<p class="assume">Cost = watts ÷ 1,000 × hours/day × days/week × 52.14 × price. Watts are typical figures; check the label or measure with a plug-in meter. Thermostatic appliances (fridges, heaters) cycle, so we use average draw.</p></div>
+ </div>
+ <div class="ad-slot" data-slot="display" hidden><div class="ad-label">Advertisement</div></div>
+ <div class="article-grid" style="padding-top:20px">
+  <div class="prose"><h2>How to use the appliance cost calculator</h2>
+<p>Every electrical device has a power rating in watts. Run a 1,000-watt device for one hour and it uses one kilowatt-hour (kWh) — the unit on your bill. Multiply kWh by your price and you have the cost. The calculator does this for each appliance and ranks them, so the biggest opportunities float to the top.</p>
+<h3>Worked example</h3>
+<p>A 1,500 W space heater running 4 hours a day: 1.5 kW × 4 h = 6 kWh a day. Over a 30-day month that's 180 kWh; at $0.17/kWh, about $31 a month — often more than people expect from a "small" heater.</p>
+<h3>Finding real wattages</h3>
+<ul><li>Check the rating label on the back or base of the appliance.</li><li>For fridges and freezers, the yearly kWh figure on an energy label is the most accurate number — divide by 8.76 to get average watts.</li><li>A plug-in power meter costs little and measures actual use, including standby. See <a href="../guides/standby-power.html">standby power</a>.</li></ul>
+<div class="callout"><strong>Biggest wins:</strong> heating, cooling, water heating and clothes drying usually dwarf electronics. Swapping resistance heat for a heat pump, or a tank water heater for a heat pump water heater, can cut those lines by half or more.</div><section class="faq"><h2>Frequently asked questions</h2><details><summary>How do I calculate an appliance's electricity cost?</summary><p>Watts ÷ 1,000 × hours used × your price per kWh. For example, a 100 W TV used 5 hours a day uses 0.5 kWh daily — about 15 kWh a month.</p></details><details><summary>Which appliances use the most electricity?</summary><p>Typically space heating and cooling, water heaters, clothes dryers, electric ovens, pool pumps and EV charging. Electronics individually use little but add up, especially on standby.</p></details><details><summary>Why does my result differ from my bill?</summary><p>Bills include fixed charges, taxes and appliances you didn't list. Seasonal loads like heating and cooling also vary month to month.</p></details></section></div>
+  <aside class="aside-stick"><div class="panel mini-lead"><div class="ico lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div><h3>Get real quotes for your home</h3><p class="muted" style="font-size:.95rem">Compare up to 3 vetted local installers. Free, no obligation, about 2 minutes.</p>
+<form class="form" data-quick action="../quotes.html">
+ <input type="hidden" name="type" value="audit">
+ <div><label for="ml-zip-audit">ZIP / postal code</label><input id="ml-zip-audit" name="zip" required autocomplete="postal-code" placeholder="e.g. 94110 or M5V 2T6"></div>
+ <button class="btn lime block" type="submit">Start my free quote →</button>
+</form><p class="fine" style="margin:10px 0 0">No spam. You choose who contacts you.</p></div><div class="panel toc"><h3>Related guides</h3><ul class="list-check" style="margin:0"><li><a href="../guides/lower-electric-bill.html">30 ways to lower your electric bill</a></li><li><a href="../guides/standby-power.html">Standby power and phantom loads</a></li><li><a href="../guides/induction-cooking.html">Induction cooking costs</a></li><li><a href="../guides/smart-thermostat-savings.html">Smart thermostat savings</a></li></ul></div></aside>
+ </div>
+</div>{% endraw %}

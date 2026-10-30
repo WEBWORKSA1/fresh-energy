@@ -1,0 +1,88 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.desc }}">
+    {{ page.robots }}
+    <link rel="canonical" href="{{ page.canon }}">
+    <meta property="og:type" content="{{ page.ogtype }}">
+    <meta property="og:site_name" content="Fresh.Energy">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.desc }}">
+    <meta property="og:url" content="{{ page.canon }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0B2B26">
+    <meta name="google-adsense-account" content="ca-pub-6620975821265271">
+    <link rel="icon" href="{{ page.pre }}assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="{{ page.pre }}site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..900&family=Instrument+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ page.pre }}assets/css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+    {{ page.ld }}</head>
+    <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="owner-strip">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership — <a href="https://web.works/contact" target="_blank" rel="noopener">contact here</a></div>
+    <header class="site-head">
+     <div class="wrap head-row">
+      <a class="brand" href="{{ page.pre }}index.html" aria-label="Fresh.Energy home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#0B2B26"/><path d="M20.5 6.5c8.6 1.2 13.4 9.6 10.6 19.2-6.6 6.4-18.4 4.6-21.6-4.4-1.9-6.6 3.4-14.2 11-14.8z" fill="#B8F02E"/><path d="M22.4 11.5l-7 10.2h5.1l-1.9 8.1 7.3-10.6h-5.2z" fill="#0B2B26"/></svg><span>Fresh<span class="dot">.</span>Energy</span></a>
+      <button class="icon-btn menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <nav class="nav" id="nav" aria-label="Main"><a href="{{ page.pre }}quotes.html"{% if page.nav_key == "quotes.html" %} aria-current="page"{% endif %}>Free quotes</a><a href="{{ page.pre }}tools/"{% if page.nav_key == "tools/" %} aria-current="page"{% endif %}>Calculators</a><a href="{{ page.pre }}guides/"{% if page.nav_key == "guides/" %} aria-current="page"{% endif %}>Guides</a><a href="{{ page.pre }}incentives.html"{% if page.nav_key == "incentives.html" %} aria-current="page"{% endif %}>Rebates</a><a href="{{ page.pre }}videos.html"{% if page.nav_key == "videos.html" %} aria-current="page"{% endif %}>Videos</a><a href="{{ page.pre }}contests.html"{% if page.nav_key == "contests.html" %} aria-current="page"{% endif %}>Contests</a><a href="{{ page.pre }}pros.html"{% if page.nav_key == "pros.html" %} aria-current="page"{% endif %}>For installers</a><a href="{{ page.pre }}support.html"{% if page.nav_key == "support.html" %} aria-current="page"{% endif %}>Support</a><a class="btn small lime" href="{{ page.pre }}tools/energy-score.html">Energy Score</a>
+       <button class="icon-btn" data-theme-toggle aria-label="Switch light or dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      </nav>
+     </div>
+    </header>
+    <main id="main">
+    {{ content }}
+    </main>
+    <footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <a class="brand" href="{{ page.pre }}index.html" style="color:#fff"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#0B2B26"/><path d="M20.5 6.5c8.6 1.2 13.4 9.6 10.6 19.2-6.6 6.4-18.4 4.6-21.6-4.4-1.9-6.6 3.4-14.2 11-14.8z" fill="#B8F02E"/><path d="M22.4 11.5l-7 10.2h5.1l-1.9 8.1 7.3-10.6h-5.2z" fill="#0B2B26"/></svg><span>Fresh<span class="dot">.</span>Energy</span></a>
+    <p style="margin-top:14px">Independent tools and plain-English guides to cut your energy bills and power your home with cleaner energy.</p>
+    <form class="form" data-form="Newsletter signup" data-ok="You're in. The next Fresh Fortnightly lands soon." style="margin-top:16px">
+     <label for="nl-email">Fresh Fortnightly — bill-cutting ideas, new rebates, contest alerts</label>
+     <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+     <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+     <select name="interest" aria-label="Main interest"><option value="">Main interest (optional)</option><option>Solar &amp; batteries</option><option>Heat pumps</option><option>EVs &amp; charging</option><option>Lowering my bills</option><option>Contests &amp; prizes</option></select>
+     <button class="btn lime" type="submit">Subscribe free</button>
+     <p class="form-status" aria-live="polite"></p>
+    </form>
+   </div>
+   <div><h4>Save &amp; switch</h4><ul>
+    <li><a href="{{ page.pre }}quotes.html">Free installer quotes</a></li><li><a href="{{ page.pre }}tools/">All calculators</a></li>
+    <li><a href="{{ page.pre }}tools/solar-calculator.html">Solar savings calculator</a></li><li><a href="{{ page.pre }}tools/heat-pump-calculator.html">Heat pump calculator</a></li>
+    <li><a href="{{ page.pre }}tools/ev-cost-calculator.html">EV vs gas calculator</a></li><li><a href="{{ page.pre }}tools/energy-score.html">Home Energy Score</a></li>
+    <li><a href="{{ page.pre }}incentives.html">Rebates &amp; incentives</a></li></ul></div>
+   <div><h4>Learn &amp; join</h4><ul>
+    <li><a href="{{ page.pre }}guides/">Guides</a></li><li><a href="{{ page.pre }}videos.html">Videos</a></li><li><a href="{{ page.pre }}glossary.html">Energy glossary</a></li>
+    <li><a href="{{ page.pre }}contests.html">Contests &amp; prizes</a></li><li><a href="{{ page.pre }}support.html">Support Fresh.Energy</a></li>
+    <li><a href="{{ page.pre }}careers.html">Careers &amp; contributors</a></li><li><a href="{{ page.pre }}pros.html">Installer partners</a></li></ul></div>
+   <div><h4>About</h4><ul>
+    <li><a href="{{ page.pre }}about.html">About &amp; methodology</a></li><li><a href="{{ page.pre }}advertise.html">Advertise &amp; sponsor</a></li><li><a href="{{ page.pre }}contact.html">Contact</a></li>
+    <li><a href="{{ page.pre }}privacy.html">Privacy &amp; cookies</a></li><li><a href="{{ page.pre }}terms.html">Terms of use</a></li>
+    <li><a href="{{ page.pre }}disclaimer.html">Disclaimer &amp; disclosures</a></li><li><a href="{{ page.pre }}trademark.html">Trademark &amp; copyright</a></li>
+    <li><a href="{{ page.pre }}sitemap.html">Site map</a></li></ul></div>
+  </div>
+  <div class="foot-legal">
+   <p>© <span data-year>2026</span> Fresh.Energy. All original text, calculators, graphics and code on this site are protected by copyright. All rights reserved.</p>
+   <p>Trademark notice: "Fresh.Energy" is the name of this independent website, used descriptively for fresh, clean energy. It is not affiliated with, endorsed by, sponsored by or connected to any company, nonprofit, product or service that uses "Fresh Energy", "FreshEnergy" or a similar name or mark. All third-party names and marks belong to their respective owners. <a href="{{ page.pre }}trademark.html">Full trademark &amp; copyright disclosure</a>.</p>
+   <p>Calculator results are estimates for education, not quotes or financial advice. Ads are served by Google AdSense. Some quote requests are shared with vetted partners only with your consent — see our <a href="{{ page.pre }}disclaimer.html">disclosures</a>.</p>
+  </div>
+ </div>
+</footer>
+    <div class="consent" id="consent" hidden role="dialog" aria-label="Cookie notice">
+     <p>We use cookies to run this site and, through Google AdSense, to show ads. Choose personalized ads, or essential cookies only with non-personalized ads. Details in our <a href="{{ page.pre }}privacy.html">privacy policy</a>.</p>
+     <div class="acts"><button class="btn small" data-consent="all">Accept all</button><button class="btn small ghost" data-consent="essential">Essential only</button></div>
+    </div>
+    <script src="{{ page.pre }}assets/js/config.js"></script>
+    <script src="{{ page.pre }}assets/js/main.js"></script>
+    {{ page.tj }}
+    {{ page.scripts }}
+    </body>
+    </html>
+    
