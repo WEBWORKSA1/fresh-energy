@@ -1,0 +1,49 @@
+---
+layout: default
+title: "EV vs gas cost calculator | Fresh.Energy"
+desc: "Compare the cost to drive an electric car versus a gas car per mile or km, per year and over 10 years — including home vs public charging."
+robots: "<meta name=\"robots\" content=\"index,follow,max-image-preview:large\">"
+canon: "https://fresh.energy/tools/ev-cost-calculator.html"
+ogtype: "website"
+pre: "../"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"Organization\", \"name\": \"Fresh.Energy\", \"url\": \"https://fresh.energy/\", \"logo\": \"https://fresh.energy/assets/img/favicon.svg\"}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"EV vs gas cost calculator\", \"applicationCategory\": \"UtilitiesApplication\", \"operatingSystem\": \"Any (web browser)\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}, \"url\": \"https://fresh.energy/tools/ev-cost-calculator.html\", \"description\": \"Compare the cost to drive an electric car versus a gas car per mile or km, per year and over 10 years — including home vs public charging.\"}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Is it cheaper to charge an EV than buy gas?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In most places, charging at home costs significantly less per mile than gasoline. Relying mostly on public fast charging can narrow or erase the gap.\"}}, {\"@type\": \"Question\", \"name\": \"What is a good EV efficiency?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Many EVs achieve roughly 3–4 miles per kWh (about 15–21 kWh per 100 km). Larger SUVs and trucks use more; cold weather and highway speeds reduce efficiency.\"}}, {\"@type\": \"Question\", \"name\": \"Does this include the price of the car?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"No — it compares running costs only. Add purchase price, financing, insurance and resale value for a full total-cost-of-ownership view.\"}}]}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://fresh.energy/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Calculators\", \"item\": \"https://fresh.energy/tools/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"EV vs gas cost calculator\", \"item\": \"https://fresh.energy/tools/ev-cost-calculator.html\"}]}</script>\n"
+tj: "<script src=\"../assets/js/tools.js\"></script>"
+scripts: ""
+nav_key: "tools/"
+---
+{% raw %}
+<div class="wrap page-head"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../tools/">Calculators</a> / <span>EV vs gas cost calculator</span></nav><div class="eyebrow"><i></i>Free calculator · runs in your browser</div><h1>EV vs gas cost calculator</h1><p class="lede">Fuel versus electricity, per mile or per kilometre, with home and public charging mixed the way you actually drive.</p></div>
+<div class="wrap">
+ <div class="tool-wrap">
+  <div class="panel"><div class="form" id="ev-calc"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="margin:0">Your driving</h3><span class="cur-pick"><label>Currency <select data-cur-pick><option>$</option><option>£</option><option>€</option><option>₹</option></select></label></span></div>
+<div><label for="ev-units">Units</label><select id="ev-units"><option value="us">Miles, mpg, gallons</option><option value="metric">Kilometres, L/100 km, litres</option></select></div>
+<div><label for="ev-dist" id="ev-dist-l">Miles per year</label><input id="ev-dist" type="number" min="0" value="12000"></div>
+<div class="row"><div><label for="ev-mpg" id="ev-eff-l">Gas car fuel economy (mpg)</label><input id="ev-mpg" type="number" min="1" step="0.1" value="30"></div><div><label for="ev-gas" id="ev-fuel-l">Gas price per gallon</label><input id="ev-gas" type="number" min="0" step="0.01" value="3.40"></div></div>
+<div><label for="ev-eff" id="ev-evef-l">EV efficiency (miles per kWh)</label><input id="ev-eff" type="number" min="0.1" step="0.1" value="3.5"></div>
+<div class="row"><div><label for="ev-rate">Home electricity per kWh</label><input id="ev-rate" type="number" inputmode="decimal" min="0" step="0.01" value="0.17"></div><div><label for="ev-pub">Public fast charging per kWh</label><input id="ev-pub" type="number" inputmode="decimal" min="0" step="0.01" value="0.45"></div></div>
+<div><label for="ev-home">Share of charging done at home: <span class="range-out" id="ev-home-o"></span></label><input type="range" id="ev-home" min="0" max="100" step="5" value="85" data-out="ev-home-o" data-fmt="%v%"></div>
+</div></div>
+  <div class="panel results" aria-live="polite"><h3>Your cost comparison</h3>
+<div class="kpis"><div class="kpi"><b id="ev-gas-y">—</b><span>Fuel per year</span></div><div class="kpi"><b id="ev-ev-y">—</b><span>Charging per year</span></div>
+<div class="kpi hi"><b id="ev-save">—</b><span id="ev-save10">Annual savings</span></div><div class="kpi"><b id="ev-epm">—</b><span>EV energy cost</span></div></div>
+<p style="margin:0 0 6px;font-weight:600">10-year running cost — <span style="color:#F0603C">gas</span> vs <span style="color:#16A06A">EV</span> (energy + maintenance)</p><svg class="chart" id="ev-chart" role="img" aria-label="10 year running cost chart"></svg>
+<table class="data" style="margin-top:12px"><tr><td>Gas car fuel cost</td><td id="ev-gpm">—</td></tr><tr><td>EV electricity use</td><td id="ev-kwh">—</td></tr><tr><td colspan="2"><strong id="ev-be">—</strong></td></tr></table>
+<a class="btn lime block" href="../quotes.html?type=evcharger" style="margin-top:14px">Get EV charger install quotes →</a>
+<p class="assume">Includes 10% charging losses. Maintenance defaults: gas $0.10/mi, EV $0.06/mi (editable estimates). Excludes purchase price, insurance and depreciation.</p></div>
+ </div>
+ <div class="ad-slot" data-slot="display" hidden><div class="ad-label">Advertisement</div></div>
+ <div class="article-grid" style="padding-top:20px">
+  <div class="prose"><h2>How we compare EV and gas costs</h2>
+<p>For the gas car: distance ÷ fuel economy × fuel price. For the EV: distance ÷ efficiency × 1.10 (about 10% of energy is lost in charging) × your blended electricity price. The blend matters — home charging is usually far cheaper than public DC fast charging, so the share of charging you do at home drives the result.</p>
+<h3>Worked example</h3>
+<p>12,000 miles at 30 mpg is 400 gallons; at $3.40 that's $1,360 a year. An EV at 3.5 miles/kWh needs 12,000 ÷ 3.5 × 1.10 ≈ 3,771 kWh. With 85% charged at home at $0.17 and 15% at $0.45, the blended price is about $0.21/kWh — roughly $800 a year. That's around $560 saved on energy alone, before lower maintenance.</p>
+<h3>Make the EV maths even better</h3>
+<ul><li><strong>Charge off-peak.</strong> Time-of-use plans can cut home charging costs sharply — see <a href="../guides/time-of-use-rates.html">time-of-use rates explained</a>.</li><li><strong>Charge from solar.</strong> Daytime charging from your own panels can bring the energy cost close to zero.</li><li><strong>Install Level 2.</strong> Faster home charging makes it easy to skip public fast chargers. See <a href="../guides/ev-home-charging.html">EV home charging</a>.</li></ul><section class="faq"><h2>Frequently asked questions</h2><details><summary>Is it cheaper to charge an EV than buy gas?</summary><p>In most places, charging at home costs significantly less per mile than gasoline. Relying mostly on public fast charging can narrow or erase the gap.</p></details><details><summary>What is a good EV efficiency?</summary><p>Many EVs achieve roughly 3–4 miles per kWh (about 15–21 kWh per 100 km). Larger SUVs and trucks use more; cold weather and highway speeds reduce efficiency.</p></details><details><summary>Does this include the price of the car?</summary><p>No — it compares running costs only. Add purchase price, financing, insurance and resale value for a full total-cost-of-ownership view.</p></details></section></div>
+  <aside class="aside-stick"><div class="panel mini-lead"><div class="ico lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div><h3>Get real quotes for your home</h3><p class="muted" style="font-size:.95rem">Compare up to 3 vetted local installers. Free, no obligation, about 2 minutes.</p>
+<form class="form" data-quick action="../quotes.html">
+ <input type="hidden" name="type" value="evcharger">
+ <div><label for="ml-zip-evcharger">ZIP / postal code</label><input id="ml-zip-evcharger" name="zip" required autocomplete="postal-code" placeholder="e.g. 94110 or M5V 2T6"></div>
+ <button class="btn lime block" type="submit">Start my free quote →</button>
+</form><p class="fine" style="margin:10px 0 0">No spam. You choose who contacts you.</p></div><div class="panel toc"><h3>Related guides</h3><ul class="list-check" style="margin:0"><li><a href="../guides/ev-home-charging.html">EV home charging guide</a></li><li><a href="../guides/ev-vs-gas-cost.html">EV vs gas: true cost per mile</a></li><li><a href="../guides/time-of-use-rates.html">Time-of-use rates</a></li></ul></div></aside>
+ </div>
+</div>{% endraw %}
