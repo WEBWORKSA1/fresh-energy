@@ -1,0 +1,84 @@
+---
+layout: default
+title: "Free Solar, Heat Pump &amp; Battery Quotes | Fresh.Energy"
+desc: "Compare up to 3 free, itemised quotes from vetted local solar, battery, heat pump, EV charger and insulation installers. 2 minutes, no obligation."
+robots: "<meta name=\"robots\" content=\"index,follow,max-image-preview:large\">"
+canon: "https://fresh.energy/quotes.html"
+ogtype: "website"
+pre: ""
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"Organization\", \"name\": \"Fresh.Energy\", \"url\": \"https://fresh.energy/\", \"logo\": \"https://fresh.energy/assets/img/favicon.svg\"}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Does it cost anything?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"No. Quotes are free and there is no obligation to buy. Installers who join our network pay us, which keeps the service free for homeowners.\"}}, {\"@type\": \"Question\", \"name\": \"How many companies will contact me?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Up to three vetted providers that serve your area and the services you selected — never a list of dozens. Tell us your preferred contact method and time and we pass that on.\"}}, {\"@type\": \"Question\", \"name\": \"What should I have ready?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A recent electricity bill (or your average monthly amount), your roof's age and orientation if you want solar, and a rough timeline. Photos of your electrical panel help installers price batteries and EV chargers accurately.\"}}, {\"@type\": \"Question\", \"name\": \"Can I just get an estimate without being contacted?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes — use our calculators. They are free and never ask for contact details.\"}}, {\"@type\": \"Question\", \"name\": \"How do you vet installers?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Partners must hold the licences and insurance their region requires, show a track record of completed installs, and agree to our homeowner code: written itemised quotes, no high-pressure tactics and no misleading savings claims. Complaints are reviewed and partners can be removed.\"}}]}</script>\n<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://fresh.energy/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Free Solar, Heat Pump & Battery Quotes\", \"item\": \"https://fresh.energy/quotes.html\"}]}</script>\n"
+tj: "<script src=\"assets/js/tools.js\"></script>"
+scripts: ""
+nav_key: "quotes.html"
+---
+{% raw %}
+<div class="wrap page-head"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Free quotes</span></nav><div class="eyebrow"><i></i>Takes about 2 minutes</div><h1>Get free quotes from vetted local energy pros</h1><p class="lede">Solar, batteries, heat pumps, EV chargers and insulation. Answer a few questions once — compare up to three itemised quotes. Free and no obligation.</p></div>
+<div class="wrap article-grid">
+ <div>
+  <form class="form lead-box" id="quote-form" data-form="QUOTE REQUEST" data-steps data-prefill data-redirect="thank-you.html?f=quote" novalidate>
+   <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+   <div class="steps-bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+   <div class="step-meta"><span>Step <span data-step-now>1</span> of 4</span><span>Free · No obligation</span></div>
+
+   <div class="step">
+    <h3>What would you like quotes for?</h3><p class="muted" style="margin-top:-6px">Pick all that apply — bundling often lowers the price.</p>
+    <div class="tiles" data-need-one><label class="tile"><input type="checkbox" name="type" value="solar"><span>Solar panels<small>Cut or erase your power bill</small></span></label><label class="tile"><input type="checkbox" name="type" value="battery"><span>Home battery<small>Backup power + store solar</small></span></label><label class="tile"><input type="checkbox" name="type" value="heatpump"><span>Heat pump<small>Efficient heating &amp; cooling</small></span></label><label class="tile"><input type="checkbox" name="type" value="hpwh"><span>Heat pump water heater<small>Hot water for ~⅓ the energy</small></span></label><label class="tile"><input type="checkbox" name="type" value="evcharger"><span>EV charger install<small>Level 2 home charging</small></span></label><label class="tile"><input type="checkbox" name="type" value="insulation"><span>Insulation &amp; sealing<small>Stop paying to heat outdoors</small></span></label><label class="tile"><input type="checkbox" name="type" value="audit"><span>Home energy audit<small>Find your biggest leaks</small></span></label><label class="tile"><input type="checkbox" name="type" value="community"><span>Community solar<small>Solar savings without a roof</small></span></label></div>
+    <div class="step-nav"><span></span><button type="button" class="btn lime" data-next>Continue →</button></div>
+   </div>
+
+   <div class="step" hidden>
+    <h3>About your home</h3>
+    <div class="row"><div><label for="q-country">Country</label><select id="q-country" name="country" required><option selected>United States</option><option>Canada</option><option>United Kingdom</option><option>Australia</option><option>India</option><option>Ireland</option><option>New Zealand</option><option>Germany</option><option>Other EU country</option><option>Other</option></select></div>
+    <div><label for="q-zip">ZIP / postal code</label><input id="q-zip" name="zip" required autocomplete="postal-code" placeholder="e.g. 94110"></div></div>
+    <div><label>Do you own the home?</label><div class="tiles"><label class="tile"><input type="radio" name="ownership" value="Own" required><span>I own it</span></label><label class="tile"><input type="radio" name="ownership" value="Renting" required><span>I rent</span></label><label class="tile"><input type="radio" name="ownership" value="Buying" required><span>Buying soon</span></label><label class="tile"><input type="radio" name="ownership" value="Landlord" required><span>I'm a landlord</span></label></div></div>
+    <div class="notice" id="renter-note" hidden>Renting? You can still save: <a href="guides/community-solar.html">community solar</a>, a better rate plan and portable upgrades. Tick "Community solar" or "Home energy audit" in step 1 and we'll match you with options that don't need your landlord — or keep going to get quotes you can share with them.</div>
+    <div class="row"><div><label for="q-home">Property type</label><select id="q-home" name="property_type"><option>Detached house</option><option>Semi-detached / townhouse</option><option>Condo / apartment</option><option>Mobile / manufactured</option><option>Farm / rural</option><option>Small business</option></select></div>
+    <div><label for="q-shade">Roof sun exposure (for solar)</label><select id="q-shade" name="roof_shade"><option>Full sun most of the day</option><option>Some shade</option><option>Mostly shaded</option><option>Not sure</option><option>Not getting solar</option></select></div></div>
+    <div><label for="q-bill">Average monthly electric bill: <span class="range-out" id="q-bill-out">$160</span></label>
+    <input type="range" id="q-bill" name="monthly_bill" min="30" max="800" step="10" value="160"></div>
+    <div class="estimate" aria-live="polite"><div><b id="q-kw">—</b><span>Indicative solar size</span></div><div><b id="q-save">—</b><span>Year-1 savings</span></div><div><b id="q-25">—</b><span>25-year savings</span></div></div>
+    <p class="fine">Indicative only; your installers will price your actual roof and usage. <span class="cur-pick" style="display:inline-flex">Currency <select data-cur-pick aria-label="Currency"><option>$</option><option>£</option><option>€</option><option>₹</option></select></span></p>
+    <div class="step-nav"><button type="button" class="btn ghost" data-prev>← Back</button><button type="button" class="btn lime" data-next>Continue →</button></div>
+   </div>
+
+   <div class="step" hidden>
+    <h3>Timing &amp; budget</h3>
+    <div><label>When would you like to start?</label><div class="tiles"><label class="tile"><input type="radio" name="timeline" value="ASAP" required><span>As soon as possible</span></label><label class="tile"><input type="radio" name="timeline" value="1-3 months" required><span>Within 1–3 months</span></label><label class="tile"><input type="radio" name="timeline" value="3-6 months" required><span>In 3–6 months</span></label><label class="tile"><input type="radio" name="timeline" value="Researching" required><span>Just researching</span></label></div></div>
+    <div class="row"><div><label for="q-pay">How would you prefer to pay?</label><select id="q-pay" name="payment"><option>Not sure yet</option><option>Cash / savings</option><option>Loan / financing</option><option>Lease or PPA (solar)</option><option>Utility or government program</option></select></div>
+    <div><label for="q-roof">Roof age (for solar)</label><select id="q-roof" name="roof_age"><option>Under 10 years</option><option>10–20 years</option><option>Over 20 years</option><option>Not sure</option></select></div></div>
+    <div><label for="q-notes">Anything installers should know? (optional)</label><textarea id="q-notes" name="notes" placeholder="e.g. 200A panel, south-facing roof, want backup for well pump, heating with oil now…"></textarea></div>
+    <div class="step-nav"><button type="button" class="btn ghost" data-prev>← Back</button><button type="button" class="btn lime" data-next>Last step →</button></div>
+   </div>
+
+   <div class="step" hidden>
+    <h3>Where should we send your quotes?</h3>
+    <div class="row"><div><label for="q-name">Full name</label><input id="q-name" name="name" required autocomplete="name"></div>
+    <div><label for="q-email">Email</label><input id="q-email" name="email" type="email" required autocomplete="email"></div></div>
+    <div class="row"><div><label for="q-phone">Phone (faster quotes)</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional"></div>
+    <div><label for="q-contact">Preferred contact</label><select id="q-contact" name="contact_pref"><option>Email only</option><option>Phone call</option><option>Text message</option><option>Any</option></select></div></div>
+    <div><label for="q-time">Best time to reach you</label><select id="q-time" name="best_time"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekends</option></select></div>
+    <label class="check"><input type="checkbox" name="consent_partners" value="Yes" required><span>I agree that Fresh.Energy may contact me about this request and share my details with up to three vetted energy providers serving my area so they can contact me by my chosen method, which may include automated calls or texts. Consent is not a condition of purchase and I can opt out at any time.</span></label>
+    <label class="check"><input type="checkbox" name="newsletter" value="Yes"><span>Also send me Fresh Fortnightly (bill-cutting tips, rebates, contests). Unsubscribe anytime.</span></label>
+    <p class="fine">By submitting you accept our <a href="terms.html">terms</a> and <a href="privacy.html">privacy policy</a>.</p>
+    <div class="step-nav"><button type="button" class="btn ghost" data-prev>← Back</button><button type="submit" class="btn lime">Get my free quotes</button></div>
+   </div>
+   <p class="form-status" aria-live="polite"></p>
+  </form>
+
+  <section class="section" style="padding:46px 0 0">
+   <h2>What happens next</h2>
+   <ol class="steps3">
+    <li><h3>We match you</h3><p class="muted">Within one business day we match your request to up to three vetted providers who serve your area.</p></li>
+    <li><h3>You compare</h3><p class="muted">Each provider sends an itemised quote. Use our <a href="guides/compare-solar-quotes.html">quote comparison checklist</a> to judge them.</p></li>
+    <li><h3>You decide</h3><p class="muted">Pick one, negotiate, or walk away. No obligation, no fees, ever.</p></li>
+   </ol>
+  </section>
+  <section style="padding-top:20px"><section class="faq"><h2>Frequently asked questions</h2><details><summary>Does it cost anything?</summary><p>No. Quotes are free and there is no obligation to buy. Installers who join our network pay us, which keeps the service free for homeowners.</p></details><details><summary>How many companies will contact me?</summary><p>Up to three vetted providers that serve your area and the services you selected — never a list of dozens. Tell us your preferred contact method and time and we pass that on.</p></details><details><summary>What should I have ready?</summary><p>A recent electricity bill (or your average monthly amount), your roof's age and orientation if you want solar, and a rough timeline. Photos of your electrical panel help installers price batteries and EV chargers accurately.</p></details><details><summary>Can I just get an estimate without being contacted?</summary><p>Yes — use our calculators. They are free and never ask for contact details.</p></details><details><summary>How do you vet installers?</summary><p>Partners must hold the licences and insurance their region requires, show a track record of completed installs, and agree to our homeowner code: written itemised quotes, no high-pressure tactics and no misleading savings claims. Complaints are reviewed and partners can be removed.</p></details></section></section>
+ </div>
+ <aside class="aside-stick">
+  <div class="panel"><div class="ico lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div><h3>Why homeowners use us</h3>
+   <ul class="list-check"><li>Independent — we don't install anything ourselves</li><li>Vetted, licensed &amp; insured pros only</li><li>Max three contacts, at times you choose</li><li>Itemised, written quotes — no "call for price"</li><li>Free red-flag checklist for every quote</li></ul></div>
+  <div class="panel"><h3>Run the numbers first?</h3><p class="muted">Try the <a href="tools/solar-calculator.html">solar</a>, <a href="tools/heat-pump-calculator.html">heat pump</a> or <a href="tools/battery-sizer.html">battery</a> calculators — no contact details needed.</p></div>
+  <div class="notice">Renting? Ask about <a href="guides/community-solar.html">community solar</a> and portable efficiency upgrades — tick "Community solar" in step 1.</div>
+ </aside>
+</div>{% endraw %}
